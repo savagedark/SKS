@@ -1,0 +1,57 @@
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "news" [0m
+
+
+Processing NewsController#create (for 0.0.0.0 at 2010-05-12 21:19:05) [POST]
+  Parameters: {"news"=>{}}
+Redirected to http://test.host/user/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 2ms (DB: 2) | 302 Found [http://test.host/news?]
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "news" [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "news" [0m
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM "news" WHERE ("news"."id" = 980190962) [0m
+
+
+Processing NewsController#destroy (for 0.0.0.0 at 2010-05-12 21:19:05) [DELETE]
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/user/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 1) | 302 Found [http://test.host/news/980190962]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "news" [0m
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM "news" WHERE ("news"."id" = 980190962) [0m
+
+
+Processing NewsController#edit (for 0.0.0.0 at 2010-05-12 21:19:05) [GET]
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/user/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/news/980190962/edit]
+
+
+Processing NewsController#index (for 0.0.0.0 at 2010-05-12 21:19:05) [GET]
+  [4;36;1mNews Load (0.4ms)[0m   [0;1mSELECT * FROM "news" [0m
+Rendering template within layouts/admin
+Rendering news/index
+Completed in 32ms (View: 29, DB: 0) | 200 OK [http://test.host/news]
+
+
+Processing NewsController#new (for 0.0.0.0 at 2010-05-12 21:19:05) [GET]
+Redirected to http://test.host/user/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/news/new]
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM "news" WHERE ("news"."id" = 980190962) [0m
+
+
+Processing NewsController#show (for 0.0.0.0 at 2010-05-12 21:19:05) [GET]
+  Parameters: {"id"=>"980190962"}
+  [4;36;1mNews Load (0.3ms)[0m   [0;1mSELECT * FROM "news" WHERE ("news"."id" = 980190962) [0m
+Rendering template within layouts/admin
+Rendering news/show
+Completed in 5ms (View: 3, DB: 1) | 200 OK [http://test.host/news/980190962]
+  [4;35;1mNews Load (0.3ms)[0m   [0mSELECT * FROM "news" WHERE ("news"."id" = 980190962) [0m
+
+
+Processing NewsController#update (for 0.0.0.0 at 2010-05-12 21:19:05) [PUT]
+  Parameters: {"id"=>"980190962", "news"=>{}}
+Redirected to http://test.host/user/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://test.host/news/980190962?]
